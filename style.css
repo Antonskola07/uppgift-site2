@@ -1,7 +1,29 @@
 :root {
-    --navbar-height: 50px;
-    background-color: #ECF0F1;
-    color: #2C3E50;
+    --navbar-links-height: 40px;
+    --navbar-name-height: 40px;
+    --navbar-height: calc(var(--navbar-links-height) + var(--navbar-name-height));
+
+    --primary-color: #2E4053;
+    --secondary-color: #3498DB;
+    --accent-color: #E74C3C;
+    --background-color: #ECF0F1;
+    --text-color: #2C3E50;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+input[type=submit] {
+    background-color: var(--accent-color);
+    border: 1px solid var(--primary-color);
+    padding: 5px;
+    cursor: progress;
+}
+form textarea {
+    resize: none;
+}
+input[type=text] {
+    padding: 5px;
 }
 
 #main-grid {
@@ -31,15 +53,15 @@ body {
 }
 
 nav {
-    background-color: #666;
+    background-color: var(--primary-color);
     color: white;
     grid-area: nav;
 }
 nav span {
     margin: 0;
     margin-left: 10px;
-    font-size: calc(var(--navbar-height) - 15px);
-    line-height: var(--navbar-height);
+    font-size: calc(var(--navbar-links-height) - 15px);
+    line-height: var(--navbar-links-height);
 }
 
 aside {
@@ -53,18 +75,27 @@ main {
     grid-area: main;
 }
 
+#topbar {
+    height: var(--navbar-name-height);
+    background-color: var(--secondary-color);
+    line-height: var(--navbar-name-height);
+    font-size: var(--navbar-name-height);
+    text-align: center;
+}
+
 nav a {
-    height: var(--navbar-height);
+    height: var(--navbar-links-height);
     display: inline-block;
-    background-color: red;
-    line-height: var(--navbar-height);
+    line-height: var(--navbar-links-height);
     margin-left: 5px;
     padding-left: 5px;
     padding-right: 5px;
+    text-decoration: none;
+    color: white;
 }
 
 nav a:hover {
-    background-color: blue;
+    background-color: var(--text-color);
     transition: background-color 0.3s;
 }
 
