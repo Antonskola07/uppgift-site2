@@ -21,7 +21,19 @@ input[type=submit] {
 }
 form textarea {
     resize: none;
+    font-family: sans-serif;
 }
+
+#links {
+    display: flex;
+    justify-content: center;
+}
+
+
+form input[type=submit] {
+    cursor: pointer;
+}
+
 input[type=text] {
     padding: 5px;
 }
@@ -79,8 +91,9 @@ main {
     height: var(--navbar-name-height);
     background-color: var(--secondary-color);
     line-height: var(--navbar-name-height);
-    font-size: var(--navbar-name-height);
+    font-size: calc(var(--navbar-name-height) - 5px);
     text-align: center;
+    font-family: sans-serif;
 }
 
 nav a {
@@ -95,10 +108,15 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--text-color);
+    background-color: var(--accent-color);
     transition: background-color 0.3s;
 }
 
 nav a:first-child {
     margin-left: 0;
+}
+
+#review-name {
+    font-weight: 900;
+    font-size: 1.5rem;
 }
