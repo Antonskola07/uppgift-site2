@@ -45,11 +45,16 @@ input[type=text] {
     width: 100%;
     height: 100%;
 }
-.contact {
+.contact, .services {
     grid-template-areas: ". nav nav ."
     ". main main ."
     ". main main ."
     ". footer footer .";
+}
+.home #logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
 }
 .home {
     grid-template-areas: ". nav nav ."
@@ -82,6 +87,10 @@ nav span {
     margin-left: 10px;
     font-size: calc(var(--navbar-links-height) - 15px);
     line-height: var(--navbar-links-height);
+}
+
+#aside-inner {
+    margin: 5px;
 }
 
 aside {
