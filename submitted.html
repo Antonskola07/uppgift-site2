@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakta oss</title>
+    <title>Skickat</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main-grid" class="contact">
+    <div id="main-grid" class="submitted">
         <nav>
             <div id="topbar">
                 Mitt företag
@@ -19,18 +19,16 @@
             </div>
         </nav>
         <main>
-            <form method="get" action="/submitted.html">
-                <input type="text" placeholder="Namn" name="namn" required>
-                <br/>
-                <textarea rows="5" cols="30" placeholder="Ditt meddelande..."></textarea>
-                <br/>
-                <input type="submit" value="Skicka">
-            </form>
+            <h1>Tack för ditt meddelande, <span id="namn"></span>!</h1>
+            <p>Vi återkommer inom kort.</p>
         </main>
         <footer>
             <span>Epost:kontakt@uhueruitwefyerr.se</span><br/>
             <span>Bankgiro: 667-2935</span>
         </footer>
     </div>
+    <script>
+        document.getElementById("namn").innerText = new URLSearchParams(window.location.search).get("namn");
+    </script>
 </body>
 </html>
