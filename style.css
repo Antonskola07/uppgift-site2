@@ -131,6 +131,10 @@ aside {
     background-color: #c7c7c7;
 }
 
+.home main a {
+    color: var(--accent-color);
+}
+
 footer {
     background-color: var(--primary-color);
     color: white;
